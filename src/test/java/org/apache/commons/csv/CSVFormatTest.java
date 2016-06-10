@@ -54,7 +54,7 @@ public class CSVFormatTest {
         return format.withDelimiter(format.getDelimiter());
     }
 
-    /*@Test(expected = IllegalArgumentException.class)
+    @Test(expected = IllegalArgumentException.class)
     public void testDelimiterSameAsCommentStartThrowsException() {
         CSVFormat.DEFAULT.withDelimiter('!').withCommentMarker('!');
     }
@@ -81,8 +81,8 @@ public class CSVFormatTest {
         assertEquals(right, left);
         assertEquals(left, right);
 
-        //assertEquals(right.hashCode(), right.hashCode());
-        //assertEquals(right.hashCode(), left.hashCode());
+        assertEquals(right.hashCode(), right.hashCode());
+        assertEquals(right.hashCode(), left.hashCode());
     }
 
     @Test
@@ -453,5 +453,5 @@ public class CSVFormatTest {
     public void testWithRecordSeparatorCRLF() throws Exception {
         final CSVFormat formatWithRecordSeparator = CSVFormat.DEFAULT.withRecordSeparator(CRLF);
         assertEquals(CRLF, formatWithRecordSeparator.getRecordSeparator());
-    }*/
+    }
 }
